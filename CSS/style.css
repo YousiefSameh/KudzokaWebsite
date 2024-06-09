@@ -1,0 +1,556 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+header * {
+  z-index: 2;
+}
+
+header .bg {
+  position: absolute;
+  width: 100%;
+  height: 720px;
+  z-index: 1;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 100px;
+  height: 126px;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul .logo img {
+  width: 85px;
+}
+
+header ul li {
+  position: relative;
+  margin: 0 25px;
+  padding-bottom: 2px;
+}
+
+header ul li:first-child {
+  margin: 0 25px 0 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+header ul li:hover a {
+  color: #7a3d8a;
+}
+
+header ul li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #7a3d8a;
+  transition: 0.25s all ease;
+}
+
+header ul li:not(:first-child):hover::before {
+  width: 100%;
+}
+
+header button {
+  background: url("../imgs/login_button_bg.png") no-repeat center;
+  width: 150px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s all ease;
+}
+
+header button a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+header button:hover {
+  transform: translateY(-7.5px);
+  font-weight: bold;
+}
+
+header .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+  height: calc(90vh - 126px);
+}
+
+header .hero .text {
+  width: 50%;
+}
+
+header .hero .text h1 {
+  font-size: 56px;
+  color: #79888F;
+  margin-bottom: 10px;
+}
+
+header .hero .text h1 span {
+  color: #7a3d8a;
+  transition: 0.25s all ease;
+}
+
+header .hero .text h1 .sec {
+  color: #79888F;
+}
+
+header .hero .text:hover h1 .sec {
+  color: #7a3d8a;
+}
+
+header .hero .text:hover h1 span:last-child {
+  color: #79888F;
+}
+
+header .hero .text p {
+  font-size: 30px;
+  color: #79888F;
+}
+
+header .hero .imgs {
+  position: relative;
+  width: 50%;
+}
+
+header .hero .imgs img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .hero .imgs .overlay1 {
+  width: 600px;
+}
+
+header .hero .imgs .overlay2 {
+  width: 300px;
+  transform: translate(-50%, -60%);
+}
+
+header .hero .imgs .overlay3 {
+  width: 400px;
+  transform: translate(-50%, 40%);
+}
+
+header .waves {
+  position: absolute;
+  width: 100%;
+  bottom: -25%;
+  right: 20%;
+}
+
+main .services {
+  position: relative;
+  text-align: center;
+  padding: 100px;
+  margin: 100px 0;
+  height: 120vh;
+}
+
+main .services * {
+  z-index: 2;
+}
+
+main .services .sec {
+  position: absolute;
+  width: 65%;
+  top: 8%;
+  left: 22%;
+  height: 60%;
+  z-index: -1;
+}
+
+main .services .card {
+  width: 400px;
+  transition: 0.25s all ease;
+  cursor: pointer;
+}
+
+main .services .card:not(:last-child):hover {
+  filter: grayscale(1);
+}
+
+main .services .card h3 {
+  color: #999;
+  font-size: 25px;
+}
+
+main .services .card p {
+  color: #b9b9b9;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+main .services .card:first-of-type {
+  position: absolute;
+  top: 16%;
+  left: 10%;
+}
+
+main .services .card:nth-child(2) {
+  position: absolute;
+  top: 32%;
+  left: 40%;
+}
+
+main .services .card:nth-child(3) {
+  position: absolute;
+  top: 65%;
+  right: 12%;
+}
+
+main .services .card:last-child {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+}
+
+main .services .card:last-child img {
+  width: 350px;
+}
+
+main .services .card:last-child .text {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  text-align: left;
+  margin-left: 12.5px;
+}
+
+main .services .card:last-child .text p {
+  color: white;
+  font-size: 25px;
+}
+
+main .services .card:last-child .text h3 {
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+main .third-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 100px 0;
+}
+
+main .third-section .text {
+  width: 35%;
+}
+
+main .third-section .text h3 {
+  color: #999;
+  font-size: 25px;
+}
+
+main .third-section .text p {
+  color: #b9b9b9;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+footer {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+footer * {
+  z-index: 2;
+}
+
+footer .bg {
+  position: absolute;
+  width: 110%;
+  height: 150%;
+  left: -3%;
+  top: 0;
+  z-index: -1;
+}
+
+footer .imgfooter {
+  position: absolute;
+  width: 40vw;
+  right: 10%;
+  bottom: 0%;
+}
+
+footer .text {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+}
+
+footer .text .sources {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -10px;
+  margin-bottom: 15px;
+}
+
+footer .text .sources .source {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../imgs/login_button_bg.png") no-repeat center;
+  width: 150px;
+  height: 50px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+footer .text .sources .source .text {
+  position: absolute;
+  left: 12.5%;
+  top: 10%;
+  display: flex;
+  align-items: center;
+}
+
+footer .text .sources .source .text img {
+  width: 25px;
+}
+
+footer .text .sources .source .text div {
+  margin-left: 5px;
+}
+
+footer .text .sources .source .text div p {
+  font-size: 12px;
+  color: #333;
+}
+
+footer .text .sources .source .text div p span {
+  display: block;
+  color: #7a3d8a;
+  font-size: 18px;
+}
+
+footer .text .icons i {
+  font-size: 30px;
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.25s all ease;
+}
+
+footer .text .icons i:hover {
+  color: #7a3d8a;
+}
+
+footer .text .icons i:last-child {
+  margin: 0;
+}
+
+footer .text ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-top: 15px;
+}
+
+footer .text ul li {
+  margin: 0 10px;
+  transition: 0.25s all ease;
+}
+
+footer .text ul li:hover {
+  transform: translateY(-5px);
+}
+
+footer .text ul li:first-child {
+  margin-left: 0;
+}
+
+footer .text ul li a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.75;
+  transition: 0.25s all ease;
+}
+
+footer .text ul li a:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+  header {
+    height: 100vh;
+  }
+  header nav {
+    justify-content: space-around;
+    padding: 0;
+    height: 85px;
+  }
+  header .bg {
+    height: 100vh;
+  }
+  header .hero {
+    flex-direction: column;
+    height: calc(100vh - 85px);
+  }
+  header .hero .text,
+  header .hero .imgs {
+    height: 50%;
+    width: 100%;
+  }
+  header .hero .text {
+    text-align: center;
+  }
+  header .hero .imgs {
+    margin-top: 240px;
+  }
+  main .services {
+    margin: 150px 0;
+    padding: 0;
+    height: 100%;
+  }
+  main .services .sec {
+    display: none;
+  }
+  main .services .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .services .content * {
+    position: static !important;
+  }
+  main .services .content .card {
+    width: 100%;
+    margin: 25px 0;
+  }
+  main .services .content .card:last-child {
+    position: relative !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main .services .content .card:last-child .text {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .third-section .imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .third-section .text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  header .hero .text h1 {
+    font-size: 35px;
+  }
+  header .hero .text p {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 576px) {
+  header nav {
+    flex-direction: column;
+  }
+  header nav img {
+    width: 60px !important;
+  }
+  header nav ul li {
+    margin: 5px;
+  }
+  header nav ul li a {
+    font-size: 12px;
+  }
+  header button {
+    padding: 10px;
+  }
+  header .hero .text {
+    width: 100vw;
+  }
+  header .waves {
+    bottom: 0;
+    left: 0;
+  }
+  header .hero .imgs {
+    display: none;
+  }
+  header .hero .text h1 {
+    font-size: 30px;
+  }
+  main .services .card:last-child img {
+    width: 300px;
+  }
+  main .services .card:last-child .text p {
+    font-size: 20px;
+  }
+  main .services .card:last-child .text h3 {
+    font-size: 40px;
+  }
+  main .third-section .imgs img {
+    width: 250px;
+  }
+  footer img:last-child {
+    display: none;
+  }
+  footer .text .sources {
+    width: 100%;
+    justify-content: center;
+  }
+  footer .text {
+    text-align: center;
+  }
+  footer .text .sources .source {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 375px) {
+  header nav ul li a {
+    font-size: 10px;
+  }
+}
